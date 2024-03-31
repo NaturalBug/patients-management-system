@@ -14,6 +14,14 @@ export type Scalars = {
   Float: { input: number; output: number; }
 };
 
+export type CreateOrderInput = {
+  message: Scalars['String']['input'];
+};
+
+export type CreatePatientInput = {
+  name: Scalars['String']['input'];
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   createOrder: Order;
@@ -24,30 +32,22 @@ export type Mutation = {
 
 
 export type MutationCreateOrderArgs = {
-  input?: InputMaybe<NewOrder>;
+  input?: InputMaybe<CreateOrderInput>;
 };
 
 
 export type MutationCreatePatientArgs = {
-  input?: InputMaybe<NewPatient>;
+  input?: InputMaybe<CreatePatientInput>;
 };
 
 
 export type MutationUpdateOrderArgs = {
-  input?: InputMaybe<UpdateOrder>;
+  input?: InputMaybe<UpdateOrderInput>;
 };
 
 
 export type MutationUpdatePatientArgs = {
-  input?: InputMaybe<UpdatePatient>;
-};
-
-export type NewOrder = {
-  message: Scalars['String']['input'];
-};
-
-export type NewPatient = {
-  name: Scalars['String']['input'];
+  input?: InputMaybe<UpdatePatientInput>;
 };
 
 export type Order = {
@@ -79,12 +79,12 @@ export type QueryPatientsArgs = {
   id?: InputMaybe<Scalars['ID']['input']>;
 };
 
-export type UpdateOrder = {
+export type UpdateOrderInput = {
   id: Scalars['ID']['input'];
   message: Scalars['String']['input'];
 };
 
-export type UpdatePatient = {
+export type UpdatePatientInput = {
   id: Scalars['ID']['input'];
   name?: InputMaybe<Scalars['String']['input']>;
   orderId?: InputMaybe<Scalars['ID']['input']>;
