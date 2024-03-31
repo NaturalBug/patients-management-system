@@ -1,5 +1,5 @@
 import React from 'react';
-import PatientsList from './Patient/PatientsList';
+import PatientsList from './PatientsList';
 
 function App() {
   return (
