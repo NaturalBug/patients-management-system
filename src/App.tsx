@@ -1,4 +1,5 @@
-import PatientsList from './PatientsList';
+import React from 'react';
+import PatientsList from './Patient/PatientsList';
 
 function App() {
   return (

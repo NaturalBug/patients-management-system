@@ -1,8 +1,9 @@
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import Patient from "./Patient";
-import OrderDialog from "./OrderDialog";
+import OrderDialog from "../Order/OrderDialog";
 import { useState } from "react";
+import React from "react";
 
 const PatientsList = () => {
   const [orderDialogOpen, setOrderDialogOpen] = useState(false);
